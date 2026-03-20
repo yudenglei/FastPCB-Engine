@@ -1,0 +1,24 @@
+# Tests CMakeLists.txt
+
+# 测试可执行文件
+add_executable(test_memory_pool test_memory_pool.cpp)
+target_link_libraries(test_memory_pool PRIVATE FastPCBEngine)
+
+add_executable(test_components test_components.cpp)
+target_link_libraries(test_components PRIVATE FastPCBEngine)
+
+add_executable(test_paramgraph test_paramgraph.cpp)
+target_link_libraries(test_paramgraph PRIVATE FastPCBEngine)
+
+add_executable(test_dependency_graph test_dependency_graph.cpp)
+target_link_libraries(test_dependency_graph PRIVATE FastPCBEngine)
+
+add_executable(test_dependency_graph_standalone test_dependency_graph_standalone.cpp)
+target_link_libraries(test_dependency_graph_standalone PRIVATE FastPCBEngine)
+
+# 注册测试
+add_test(NAME MemoryPoolTest COMMAND test_memory_pool)
+add_test(NAME ComponentsTest COMMAND test_components)
+add_test(NAME ParamGraphTest COMMAND test_paramgraph)
+add_test(NAME DependencyGraphTest COMMAND test_dependency_graph)
+add_test(NAME DependencyGraphStandaloneTest COMMAND test_dependency_graph_standalone)

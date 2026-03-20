@@ -1,0 +1,25 @@
+# Build output
+build/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OpenCASCADE
+lib/
+*.lib
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
